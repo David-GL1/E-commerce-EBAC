@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header__nav--link,
+.header__menu--link,
+.footer__link{
+    @extend %Link-styles-general;
+}
+
+.form__link{
+    @extend %Styles-links-form;
+}
+
+//Estructura HEADER
+
+.header {
+    width: $tamañomaximo;
+}
+
+.header__help {
+    display: flex;
+    justify-content: center;
+    width: $tamañomaximo;
+    background-color: $blanco;
+    padding: 1rem 0;
+    margin-bottom: 0.5rem;
+}
+
+.header__nav--list {
+    display: flex;
+    gap: 1.1rem;
+}
+
+.header__logo {
+    @include flex-center; 
+    justify-content: space-between;
+    padding: 0.8rem;
+}
+
+.header__menu {
+    display: flex;
+    gap: 1rem;
+    transform: translateX(55%);
+
+    @include phones{
+        display: none;
+    }
+
+    @include tablets{
+        display: none;
+    }
+}
+
+.header__user--img1{
+    @include phones{
+         display: none;
+    }
+}
+
+.header__user--img{
+    &:hover{
+        transform: scale(1.1); 
+    }
+
+    @include no-hover {
+        &:hover {
+            transform: scale(1);
+        }
+    }
+}
+
+.header__user {
+    @include flex-center; 
+    gap: 1rem;
+}
+
+.header__logo--img {
+    width: 100px;
+}
+
+.header__search-input {
+    width: 16rem;
+    padding: 0.5rem 1rem;
+
+    @include phones{
+        display: none;
+    }
+}
+
+.header__search--img{
+    @include phones{
+        display: inline;
+    }
+}
+
+//Estructura banner index.html
+
+.banner {
+    width: $tamañomaximo;
+    @include flex-center;
+    justify-content: space-around;
+    padding: 2rem;
+    margin-bottom: 8rem;
+
+    @include phones{
+        flex-direction: column;
+    }
+
+    @include tablets{
+        flex-direction: column;
+    }
+}
+
+.banner__title {
+    @include phones {
+        margin-bottom: 4rem;
+    }
+}
+
+.banner__image-img {
+    width: 34rem;
+
+    @include phones { 
+        width: 19rem !important;
+        transform: rotate(15deg) translateY(-6%) translateX(1%);
+    }
+
+    @include tablets {
+        width: 27.5rem; // Tamaño para tablets
+    }
+}
+
+
+.cartInformarion {
+    width: $tamañomaximo;
+}
+
+.cartInformarion__title {
+    margin-bottom: 1.5rem;
+}
+
+.cartInformarion__text {
+    margin-bottom: 10rem;
+
+    @include phones{
+        padding: 1rem;
+    }
+}
+
+//Estructura productos index.html
+
+.Products {
+    width: 92%;
+    max-width: 1900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+    margin: 0 auto;
+    gap: 1.3rem;
+
+    @include phones{
+        padding: 0 10px;
+        margin: 0;
+        width: $tamañomaximo;
+        gap: 0;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    @include tablets{
+        width: 90%;
+        margin: 0 50px;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 1rem;
+    }
+}
+
+.Products__cart {
+    width: $tamañomaximo;
+    padding: 0 12px 20px;
+    margin-bottom: 20px;
+}
+
+.Products__cart--img {
+    width: $tamañomaximo;
+    height: 280px;
+    margin-bottom: 0.3em;
+
+    @include phones{
+        height: 200px;
+    }
+}
+
+.Products__cart--title,
+.Products__cart--text {
+    margin-bottom: 0.3rem;
+}
+
+//Estructura footer index.html
+
+.footer {
+    height: $tamañomaximo;
+    width: $tamañomaximo;
+    padding-top: 3rem;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 7rem;
+
+    @include phones{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+}
+
+.footer__logo--img {
+    width: 100px;
+}
+
+.footer__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: auto;
+
+    @include phones{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.footer__link {
+    @extend %Link-styles-general;
+}
+
+//Estructura login.html
+
+.Maincontainer {
+    max-width: 830px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+
+    @include phones{
+        width: 90%;
+        position: absolute; /* Posición absoluta */
+        top: 50%; /* Mueve el centro verticalmente */
+        left: 50%; /* Mueve el centro horizontalmente */
+        transform: translate(-50%, -50%); /* Ajusta el punto de anclaje al centro */
+    }
+
+    @include tablets{
+        width: 85%;
+        position: absolute; /* Posición absoluta */
+        top: 50%; /* Mueve el centro verticalmente */
+        left: 50%; /* Mueve el centro horizontalmente */
+        transform: translate(-50%, -50%); /* Ajusta el punto de anclaje al centro */
+    }
+}
+
+.container {
+    @include flex-expand;
+    margin-right: 1rem;
+
+    @include phones{
+        display: none;
+    }
+}
+
+.container__img {
+    width: 100%;
+
+    @include phones{
+        display: none;
+    }
+}
+
+.form {
+    @include flex-expand;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2.25rem 2.812rem 0 2.812rem;
+    height: 100%;
+    box-sizing: border-box;
+
+    @include phones{
+        padding: 2.3rem 0 1.8rem;
+    }
+}
+
+.form__input {
+    @extend %style-input;
+
+    @include phones{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.form__label {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.form__submit {
+    @extend %style-submit;
+
+    &:hover{
+        color: $blanco !important;
+    }
+
+    @include no-hover{
+        &:hover{
+            color: $negro;
+        }
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        top: 0;
+        left: -40px;
+        transform: skewX(45deg);
+        background-color: $morado;
+        z-index: 1;
+        transition: all 0.6s ease;
+
+    @include phones{
+        display: none;
+        }
+
+    @include tablets{
+        display: none;
+        }
+    }
+
+
+    &:hover::before{
+        width: 160%;
+    }
+
+    @include tablets{
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+.form__submit--span {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+

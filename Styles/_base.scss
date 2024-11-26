@@ -1,0 +1,119 @@
+// Variables de colores y tipografía
+$blanco: #FFFFFF;
+$negro: #000000;
+$morado: #8a11da;
+$fuente-principal: "Bodoni Moda", serif;
+$no-activo: none;
+$tamañomaximo: 100%;  
+
+//Mixins
+
+@mixin  flex-expand {
+    display: flex;
+    flex: 1;
+}
+
+@mixin flex-center {
+    display: flex; 
+    align-items: center;
+}
+
+//Mixin con media queries DISEÑO RESPONSIVO
+
+@mixin phones { 
+    @media screen and (max-width: 48rem) { 
+        @content; 
+    } 
+}
+
+@mixin tablets { 
+    @media screen and (min-width: 48rem) and (max-width: 66.25rem) { 
+        @content; 
+    } 
+}
+
+@mixin no-hover {
+    @media (hover: none) and (pointer: coarse) {
+        @content;
+    }
+}
+
+
+// Clases placeholder
+%style-input {
+    width: 95%;
+    height: 2rem;
+    background: transparent;
+    border-bottom: 1px solid $negro;
+    border-top: $no-activo;
+    border-right: $no-activo;
+    border-left: $no-activo;
+    font-family: $fuente-principal;
+    font-size: 1rem;
+}
+
+%style-submit {
+    color: $negro;
+    border: 2px solid $negro;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+%Styles-links-form {
+    color: $negro;
+    text-decoration: $no-activo;
+    display: block;
+    font-family: $fuente-principal;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: $morado;
+    }
+
+    @include no-hover{
+        &:hover{
+            color: inherit;
+            transition: none;
+        }
+    }
+
+    @include phones{
+        color: #0000EE;
+    }
+
+    @include tablets{
+        color: #0000EE;
+    }
+
+}
+
+%Link-styles-general {
+    text-decoration:  $no-activo;
+    color: $negro;
+    font-family: $fuente-principal;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: $morado;
+        transform: scale(1.1); // Escala al hacer hover
+    }
+
+    @include no-hover{
+        &:hover{
+            color: inherit;
+            transform: scale(1);
+            transition: none;
+        }
+    }
+}
+
+
+
+
+
+
