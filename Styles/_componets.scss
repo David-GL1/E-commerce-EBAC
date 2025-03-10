@@ -7,12 +7,9 @@
     background-color: $blanco;
 }
 
-.header__nav--list {
-    list-style: no-activo;
-}
 
-.header__search--img {
-    display: none;
+.header__logo {
+    background-color: $blanco;
 }
 
 .header__search-input {
@@ -30,6 +27,22 @@
 .header__search-input::placeholder {
     color: #888888;
     opacity: 0.7;
+}
+
+.general__icon{
+  @extend %style-icons-allPage;
+}
+
+.icon__openMenu{
+    font-size: 25px;
+}
+
+.header__user--badge {
+    background-color: $blanco;
+    color: $morado ;
+    font-weight: bold;
+    border-radius: 50%; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 //Estilos banner index.html
@@ -53,23 +66,23 @@
     width: 34rem;
 }
 
-.cartInformarion {
+.cardInformarion {
     text-align: center;
 }
 
-.cartInformarion__title {
+.cardInformarion__title {
     font-family: $fuente-principal;
     font-size: 5rem;
 }
 
-.cartInformarion__text {
+.cardInformarion__text {
     font-family: $fuente-principal;
     font-size: 2rem;
 }
 
 //Estilos productos index.html
 
-.Products__cart {
+.Products__card--img{
     cursor: pointer;
 }
 
@@ -89,9 +102,111 @@
     color: $blanco; 
 }
 
+//Estilos carrito de compras
+
+.shoppingCart{
+    background-color: $blanco;
+    box-shadow: -19px 1px 22px 15px rgba(0, 0, 0, 0.30);
+}
+
+.emptyShoppingCart__container--text{
+    font-family: $fuente-principal;
+}
+
+.shoppingCart__finalPriceContainer{
+    border-bottom: 1px solid #ccc;
+}
+
+.shoppingCart__finalPriceContainer-text{
+    font-family: $fuente-principal;
+    font-size: 1.2rem;
+
+    @include phones {
+        font-size: 1rem;
+    }
+}
+
+.shoppingcart__closeIcon{
+    cursor: pointer;
+}
+
+.shoppingCart__title{
+    text-align: center;
+    font-family: $fuente-principal;
+}
+
+.shoppingCart__listTitles{
+    list-style: none;
+    font-family: $fuente-principal;
+}
+
+.shoppingCart__containerProduct{
+    border-bottom: 1px solid #ccc; 
+}
+
+.normal-btn{
+    font-size: 1.15rem;
+    border-radius: 50%;
+    background-color: $negro;
+    color: $blanco;
+    cursor: pointer;
+}
+
+//Estilos Menu Izquierdo
+.leftMenu{
+    background-color: $blanco;
+    box-shadow: -19px 1px 22px 15px rgba(0, 0, 0, 0.30);
+    transition: transform 0.25s ease-in-out; 
+
+
+    @include phones {
+        box-shadow: none !important;
+        opacity: 0;
+        transform: translateX(100%);
+
+        &.show{
+            opacity: 1;
+            transition: transform 0.25s ease-in-out, opacity  .10s ease-in-out; 
+        }
+    }
+
+    @include tablets{
+        box-shadow: none !important;
+        opacity: 0;
+
+        &.show{
+            opacity: 1;
+            transition: transform 0.25s ease-in-out, opacity  .10s ease-in-out; 
+        }
+    }
+}
+
+.leftMenu__listcontainer--tag,
+.leftMenu__unorderedListcontainer{
+    list-style: none;
+}
+
+.leftMenu__listcontainer--element{
+    font-family: $fuente-principal;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.divider{
+    background-color: $negro;
+}
+
+.leftMenu__sloganContainer{
+    background-color: $negro;
+    color: $blanco;
+}
+
+.leftMenu__containerSlogan--slogan{
+    font-family: $fuente-principal;
+}
+
 //Estilos login.html
-
-
 .Maincontainer {
     background: $blanco;
     border-radius: 10px;
@@ -110,7 +225,7 @@
 }
 
 .form__input:focus {
-    outline: $no-activo;
+    outline: none;
     border-bottom: 1px solid $negro;
 }
 
@@ -121,5 +236,4 @@
 .form__label {
     font-family: $fuente-principal;
 }
-
 
