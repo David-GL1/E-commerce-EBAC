@@ -35,6 +35,14 @@
 
 .icon__openMenu{
     font-size: 25px;
+
+    @include phones{
+        display: none;
+    }
+
+    @include tablets{
+        display: none;
+    }
 }
 
 .openMenuLeft__tabletsPhones {
@@ -309,25 +317,27 @@
 }
 
 //Menu izquierdo
-.leftMenu{
-   @include flex-column;
+.leftMenu {
+    @include flex-column;
     width: 350px;
     height: 100%;
     position: fixed;
     top: 0;
     z-index: 10;
     @extend %styles-scrollBar;
-    left: -100%;
-
-    &.show{
-        left: 0;
+    left: -100%; 
+    transition: left 0.3s ease-in-out;  
+ 
+ 
+    &.show {
+       left: 0;  
     }
 
     @include phones {
         width: 100%;
         left: auto;
         transform: translateX(100%);
-
+       
         &.show{
             transform: translateX(0); 
         }
@@ -342,7 +352,7 @@
             transform: translateX(0); 
         }
     }
-}
+ }
 
 .leftMenu__closeIcon{
     align-self: flex-end;

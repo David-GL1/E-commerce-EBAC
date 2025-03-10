@@ -156,13 +156,10 @@
 .leftMenu{
     background-color: $blanco;
     box-shadow: -19px 1px 22px 15px rgba(0, 0, 0, 0.30);
-    transition: transform 0.25s ease-in-out; 
-
 
     @include phones {
         box-shadow: none !important;
         opacity: 0;
-        transform: translateX(100%);
 
         &.show{
             opacity: 1;

@@ -171,6 +171,16 @@
 .icon__openMenu {
   font-size: 25px;
 }
+@media screen and (max-width: 48rem) {
+  .icon__openMenu {
+    display: none;
+  }
+}
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
+  .icon__openMenu {
+    display: none;
+  }
+}
 
 .openMenuLeft__tabletsPhones {
   display: none;
@@ -467,6 +477,7 @@
   top: 0;
   z-index: 10;
   left: -100%;
+  transition: left 0.3s ease-in-out;
 }
 .leftMenu.show {
   left: 0;
@@ -903,13 +914,11 @@
 .leftMenu {
   background-color: #FFFFFF;
   box-shadow: -19px 1px 22px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.25s ease-in-out;
 }
 @media screen and (max-width: 48rem) {
   .leftMenu {
     box-shadow: none !important;
     opacity: 0;
-    transform: translateX(100%);
   }
   .leftMenu.show {
     opacity: 1;
