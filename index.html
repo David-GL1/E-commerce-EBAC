@@ -11,27 +11,26 @@
     <title>Pagina E-commerce</title>
 </head>
 <body>
-    <script src="js/script.js" defer></script>
-
     <!-- HEADER (BARRA DE NAVEGACION) -->
     <div class="header__help">
         <i class="fa-solid fa-bars general__icon icon__openMenu"></i>
     <nav class="header__nav">
         <ul class="header__nav--list">
-            <a href="#" class="header__nav--link">Nosotros</a>
-            <a href="#" class="header__nav--link">Ayuda</a>
-            <a href="#" class="header__nav--link">Contacto</a>
-            <a href="login.html" class="header__nav--link">Iniciar sesion</a>
+            <li class="header__nav--listElement"><a href="#" class="header__nav--link">Nosotros</a></li>
+            <li class="header__nav--listElement"><a href="#" class="header__nav--link">Ayuda</a></li>
+            <li class="header__nav--listElement"><a href="#" class="header__nav--link">Contacto</a></li>
+            <li class="header__nav--listElement"><a href="login.html" class="header__nav--link">Iniciar sesion</a></li>
+           
         </ul>
     </nav>
 </div>
 
     <header class="header">
         <div class="header__logo">
-            <a href=""><img src="img/logo_nike_principal.jpg" alt="Logo Nike" class="header__logo--img"></a>
+            <a href="index.html"><img src="img/logo_nike_principal.jpg" alt="Nike dark logo" class="header__logo--img"></a>
             <div class="header__user">
                 <div class="header__search">
-                    <img src="img/search_logo.svg" alt="Search_logo"   class="header__search--img">
+                    <img src="img/search_logo.svg" alt="Search logo"   class="header__search--img">
                     <input type="search" class="header__search-input"  placeholder="Buscar productos">
                 </div>
                 <a href="login.html"><i class="fa-regular fa-user header__user--imgNone  general__icon"></i></a>
@@ -48,7 +47,7 @@
     <aside class="leftMenu">
         <i class="fa-regular fa-rectangle-xmark leftMenu__closeIcon general__icon"></i>
         <div class="leftMenu__container">
-            <img class="leftMenu__container--img" src="img/logo_nike_principal.jpg" alt="">
+            <img class="leftMenu__container--img" src="img/logo_nike_principal.jpg" alt="Nike dark logo">
         </div>
         <div class="leftMenu__unorderedListcontainer">
             <ul class="leftMenu__listcontainer--tag">
@@ -69,7 +68,7 @@
         </div>
         <div class="leftMenu__sloganContainer">
             <h3 class="leftMenu__containerSlogan--slogan">Just do it</h3>
-            <img class="leftMenu__containerSlogan--img" src="img/logo-nie-blanco.jpg" alt="">
+            <img class="leftMenu__containerSlogan--img" src="img/logo-nie-blanco.jpg" alt="Nike light logo">
         </div>
     </aside>
 
@@ -78,8 +77,8 @@
 <aside class="shoppingCart">
     <i class="fa-regular fa-rectangle-xmark shoppingCart__closeIcon general__icon"></i>
     <div class="emptyShoppingCart__container">
-        <img  class="emptyShoppingCart__container--img" src="img/add-cart_5733196.png" alt="">
-        <p  class="emptyShoppingCart__container--text">El carrito actualmente esta vacio.<br>Agrega productos para velos aca.</p>
+        <img  class="emptyShoppingCart__container--img" src="img/add-cart_5733196.png" alt="Empty shopping cart">
+        <p  class="emptyShoppingCart__container--text">El carrito actualmente esta vacio.<br>Agrega productos para verlos aca.</p>
     </div>
 </aside>
 
@@ -95,7 +94,7 @@
             <h1 class="banner__title">Nuevos lanzamientos</h1>
         </div>
         <div class="banner__image">
-            <img src="img/img-banner.png" alt="Descripción de la imagen" class="banner__image-img">
+            <img src="img/img-banner.png" alt="New releases" class="banner__image-img">
         </div>
     </section>
     <div class="cardInformarion">
@@ -110,7 +109,7 @@
             <img class="Products__card--img" src="img/nike-metcom-8.jpg" alt="Nike Metcon 8">
             <div>
                 <h2 class="Products__card--title">Nike Metcon 8</h2>
-                <p class="Products__card--text">Precio: $3,200 MXN</p>
+                <p class="Products__card--text">Precio:<span class="priceProduct">$3,200 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -119,7 +118,7 @@
             <img class="Products__card--img" src="img/nike-air-max-270.png" alt="Nike Air Max 270">
             <div>
                 <h2 class="Products__card--title">Nike Air Max 270</h2>
-                <p class="Products__card--text">Precio: $3,799 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$3,799 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -128,7 +127,7 @@
             <img class="Products__card--img" src="img/nike-mid-blazer-77.png" alt="Nike Blazer Mid '77">
             <div>
                 <h2 class="Products__card--title">Nike Blazer Mid '77</h2>
-                <p class="Products__card--text">Precio: $2,699 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$2,699 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -137,7 +136,7 @@
             <img class="Products__card--img" src="img/hodie-nike.jpg" alt="Nike Sportswear Club Hoodie">
             <div>
                 <h2 class="Products__card--title">Nike Sportswear Club Hoodie</h2>
-                <p class="Products__card--text">Precio: $1,899 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$1,899 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -146,7 +145,7 @@
             <img class="Products__card--img" src="img/nike-pro-lleggins.png" alt="Nike Pro 365 Leggings">
             <div>
                 <h2 class="Products__card--title">Nike Pro 365 Leggings</h2>
-                <p class="Products__card--text">Precio: $999 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$999 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -155,7 +154,7 @@
             <img class="Products__card--img" src="img/nike-brasilia.jpg" alt="Nike Brasilia Backpack">
             <div>
                 <h2 class="Products__card--title">Nike Brasilia Backpack</h2>
-                <p class="Products__card--text">Precio: $749 MXN</p>    
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$749 MXN</span></p>    
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -164,7 +163,7 @@
             <img class="Products__card--img" src="img/nike-socks.jpg" alt="Nike Everyday Plus Socks">
             <div>
                 <h2 class="Products__card--title">Nike Everyday Plus Socks</h2>
-                <p class="Products__card--text">Precio: $299 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$299 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -173,7 +172,7 @@
             <img class="Products__card--img" src="img/nike revolution 6.avif" alt="Nike Revolution 6">
             <div>
                 <h2 class="Products__card--title">Nike Revolution 6</h2>
-                <p class="Products__card--text">Precio: $1,599 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$1,599 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -182,7 +181,7 @@
             <img class="Products__card--img" src="img/Nike Sportswear Tech Fleece Joggers.png" alt="Nike Sportswear Club Fleece Pants">
             <div>
                 <h2 class="Products__card--title">Nike Sportswear Club Fleece Pants</h2>
-                <p class="Products__card--text">Precio: $1,299 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$1,299 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -191,7 +190,7 @@
             <img class="Products__card--img" src="img/nike.heritahe.jpg" alt="Nike Heritage86 Cap">
             <div>
                 <h2 class="Products__card--title">Nike Heritage86 Cap</h2>
-                <p class="Products__card--text">Precio: $549 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$549 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -200,7 +199,7 @@
             <img class="Products__card--img" src="img/nike-bra.png" alt="Nike Swoosh Sports Bra">
             <div>
                 <h2 class="Products__card--title">Nike Swoosh Sports Bra</h2>
-                <p class="Products__card--text">Precio: $799 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$799 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -209,7 +208,7 @@
             <img class="Products__card--img" src="img/nike-windruner-jacket.png" alt="Nike Windrunner Jacket">
             <div>
                 <h2 class="Products__card--title">Nike Windrunner Jacket</h2>
-                <p class="Products__card--text">Precio: $2,499 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$2,499 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -218,7 +217,7 @@
             <img class="Products__card--img" src="img/nike-victori-one.jpg" alt="Nike Victori One Slides">
             <div>
                 <h2 class="Products__card--title">Nike Victori One Slides</h2>
-                <p class="Products__card--text">Precio: $699 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$699 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -227,7 +226,7 @@
             <img class="Products__card--img" src="img/nike-lebron20.webp" alt="Nike LeBron 20">
             <div>
                 <h2 class="Products__card--title">Nike LeBron 20</h2>
-                <p class="Products__card--text">Precio: $5,999 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$5,999 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -236,7 +235,7 @@
             <img class="Products__card--img" src="img/hodie-nike.jpg" alt="Nike Tech Fleece Hoodie">
             <div>
                 <h2 class="Products__card--title">Nike Tech Fleece Hoodie</h2>
-                <p class="Products__card--text">Precio: $2,999 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$2,999 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -245,7 +244,7 @@
             <img class="Products__card--img" src="img/Nike Therma-Fit Gloves.jpg" alt="Nike Therma-Fit Gloves">
             <div>
                 <h2 class="Products__card--title">Nike Therma-Fit Gloves</h2>
-                <p class="Products__card--text">Precio: $499 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$499 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -254,7 +253,7 @@
             <img class="Products__card--img" src="img/flecce pants.jpg" alt="Nike Sportswear Tech Fleece Joggers">
             <div>
                 <h2 class="Products__card--title">Nike Sportswear Tech Fleece Joggers</h2>
-                <p class="Products__card--text">Precio: $2,199 MXN</p>
+                <p class="Products__card--text">Precio: <span  class="priceProduct">$2,199 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -263,7 +262,7 @@
             <img class="Products__card--img" src="img/Nike Air Force 1 '07.png" alt="Nike Air Force 1 '07">
             <div>
                 <h2 class="Products__card--title">Nike Air Force 1 '07</h2>
-                <p class="Products__card--text">Precio: $2,999 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$2,999 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -272,7 +271,7 @@
             <img class="Products__card--img" src="img/short-dri-fit.png" alt="Nike Dri-FIT Shorts">
             <div>
                 <h2 class="Products__card--title">Nike Dri-FIT Shorts</h2>
-                <p class="Products__card--text">Precio: $599 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$599 MXN</span></p>
             </div>
             <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -281,7 +280,7 @@
             <img class="Products__card--img" src="img/Nike Hyperfuel Water Bottle.jpg" alt="Nike Hyperfuel Water Bottle">
             <div>
                 <h2 class="Products__card--title">Nike Hyperfuel Water Bottle</h2>
-                <p class="Products__card--text">Precio: $299 MXN</p>
+                <p class="Products__card--text">Precio:<span  class="priceProduct">$299 MXN</span></p>
             </div>
                   <button class="btn__general Products__card--btn"><span class="btn__general--span"><i class="fa-solid fa-cart-shopping btn__general--icon"></i>Agregar al carrito</span></button>
         </article>
@@ -293,7 +292,7 @@
     <footer class="footer">
         <div class="footer__container">
             <h3 class="footer__container--title">Just do it</h3>
-           <a href=""><img class="footer__logo--img" src="img/logo_nike_principal_oscuro.jpg" alt="Logo Nike"></a>
+           <a href=""><img class="footer__logo--img" src="img/logo_nike_principal_oscuro.jpg" alt="Nike dark logo"></a>
         </div>
         <div class="footer__copyright">
         <small class="footer__copyright--text">&copy; 2024 Todos los derechos reservados.</small>
@@ -302,6 +301,9 @@
         <a class="footer__link" href="">Términos de privacidad</a>
         </div>
     </footer>
+
+    <script src="js/script.js" defer></script>
+
     </body>
 </html>
 

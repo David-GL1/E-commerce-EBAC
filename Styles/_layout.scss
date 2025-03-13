@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body.noScroll{
+    overflow: hidden;
+}
+
 .header__nav--link,
 .footer__link{
     @extend %style-linkGeneral;
@@ -334,8 +338,8 @@
     }
 
     @include phones {
-        width: 100%;
         left: auto;
+        width: 100%;
         transform: translateX(100%);
        
         &.show{
@@ -344,8 +348,8 @@
     }
 
     @include tablets{
-        width: 100%;
         left: auto;
+        width: 100%;
         transform: translateX(100%);  
 
         &.show{
@@ -458,6 +462,7 @@
     display: flex;
     align-items: center;
     justify-content: end;
+    letter-spacing: 1.5px;
 
     @include phones {
         align-items: center;

@@ -7,6 +7,10 @@
     background-color: $blanco;
 }
 
+.header__nav--listElement{
+    list-style: none;
+}
+
 
 .header__logo {
     background-color: $blanco;
@@ -160,10 +164,11 @@
     @include phones {
         box-shadow: none !important;
         opacity: 0;
+        transition: transform 0.25s ease-in-out, opacity 0.10s ease-in-out 0.40s;
+
 
         &.show{
             opacity: 1;
-            transition: transform 0.25s ease-in-out, opacity  .10s ease-in-out; 
         }
     }
 
@@ -173,7 +178,7 @@
 
         &.show{
             opacity: 1;
-            transition: transform 0.25s ease-in-out, opacity  .10s ease-in-out; 
+            transition: transform 0.25s ease-in-out, opacity 0.10s ease-in-out 0.40s;
         }
     }
 }

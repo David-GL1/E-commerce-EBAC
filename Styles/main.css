@@ -147,6 +147,10 @@
   box-sizing: border-box;
 }
 
+body.noScroll {
+  overflow: hidden;
+}
+
 .header {
   width: 100%;
 }
@@ -484,8 +488,8 @@
 }
 @media screen and (max-width: 48rem) {
   .leftMenu {
-    width: 100%;
     left: auto;
+    width: 100%;
     transform: translateX(100%);
   }
   .leftMenu.show {
@@ -494,8 +498,8 @@
 }
 @media screen and (min-width: 48rem) and (max-width: 64rem) {
   .leftMenu {
-    width: 100%;
     left: auto;
+    width: 100%;
     transform: translateX(100%);
   }
   .leftMenu.show {
@@ -606,6 +610,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
+  letter-spacing: 1.5px;
 }
 @media screen and (max-width: 48rem) {
   .shoppingCart__finalPriceContainer {
@@ -772,6 +777,10 @@
   background-color: #FFFFFF;
 }
 
+.header__nav--listElement {
+  list-style: none;
+}
+
 .header__logo {
   background-color: #FFFFFF;
 }
@@ -919,10 +928,10 @@
   .leftMenu {
     box-shadow: none !important;
     opacity: 0;
+    transition: transform 0.25s ease-in-out, opacity 0.1s ease-in-out 0.4s;
   }
   .leftMenu.show {
     opacity: 1;
-    transition: transform 0.25s ease-in-out, opacity 0.1s ease-in-out;
   }
 }
 @media screen and (min-width: 48rem) and (max-width: 64rem) {
@@ -932,7 +941,7 @@
   }
   .leftMenu.show {
     opacity: 1;
-    transition: transform 0.25s ease-in-out, opacity 0.1s ease-in-out;
+    transition: transform 0.25s ease-in-out, opacity 0.1s ease-in-out 0.4s;
   }
 }
 
